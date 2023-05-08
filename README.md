@@ -45,7 +45,24 @@ cnh_theme <- function () {
 
 ## Example output
 
-Here’s what happens when you run that code on the tidyverse `ToothGrowth` data.
+Here’s what happens when you run that code on the tidyverse `ToothGrowth` data along with an example of how easy it is to make this tweak (note the + `cnh_theme()` code)
 
+``` r
+ggplot(ToothGrowth, aes(x = supp, y = len, fill = supp)) +
+  geom_boxplot() +
+  facet_grid( ~ dose) +
+  labs(x = "Dose (mg/day)",
+       y = "Tooth length (mm)",
+       title = "<span style = 'color:#F8766D;'>Orange Juice</span> and <span style = 'color:#00BFC4;'>Vitamin C</span> Effect on Tooth Growth",
+       subtitle = "Tooth growth generally increases with doses, as measured in 60 Guinea Pigs",
+       caption = "Produced using cnh_theme",
+       fill = "Supplement") +
+  cnh_theme()
+      
+    )
+}
+```
+![Alt text](https://github.com/curtisnedhansen/ExampleCode/blob/main/cnh_theme.png)
 
 Compare that to the default style (notice increased chartjunk, increased difficulty of locating/reading headline, etc)
+![Alt text](https://github.com/curtisnedhansen/ExampleCode/blob/main/default.png)
