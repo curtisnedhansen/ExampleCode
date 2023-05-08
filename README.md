@@ -1,8 +1,6 @@
 Code chunk:
 ================
 
-`{r setup, include=FALSE} knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)`
-
 ## Why this code:
 We spend so much time working to source, clean, reshape, merge, analyze, and summarize our data. Nothing is more frustrating than producing remarkable results but having an audience be confused or underwhelmed by the visualization of the data. One way to help fix that is to have a consistent visual style so that your audience can more easily interpret results while also developing (and then maintaining) your 'brand' as an anaylst. 
 
